@@ -30,7 +30,7 @@ for image_class in os.listdir(data_dir):
             print('Issue with image {}'.format(image_path))
 
 
-data = keras.utils.image_dataset_from_directory('data')
+data = tf.keras.utils.image_dataset_from_directory('data')
 data_iterator = data.as_numpy_iterator()
 batch = data_iterator.next()
 print(batch)
